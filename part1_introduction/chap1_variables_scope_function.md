@@ -588,3 +588,78 @@ const students = [
   }
 ];
 ```
+
+## spread operator
+
+Vous pouvez effectuer un merge de deux tableaux en JS à l'aide de l'opérateur spread :
+
+```js
+let numbers1 = [1,2,3, 4, 5, 7, 8, 9, 10]; 
+let numbers2 = [11, 12, 13]; 
+
+let numMerge = [ ...numbers1, ...numbers2 ];
+```
+
+Vous pouvez également "merger" deux littéraux :
+
+```js
+let st1 = { s1 : "Alan", s2 : "Alice" } 
+let st2 = { s3 : "Bernard", s4 : "Sophie" }
+
+let stMerge = { ...st1, ...st2 }
+```
+
+Le spread operator peut servir également pour "mettre à jour" une clé dans un littéral :
+
+```js
+const state = {
+    name : "",
+    email : "alan@alan.fr"
+}
+
+const newState = { ...state, email : "sophie@sophie.fr" }
+// {name: "", email: "sophie@sophie.fr"}
+```
+
+## nom de propriété calculés et décomposition
+
+Vous pouvez utiliser une variable pour définir une clé d'un littéral, dans ce cas la syntaxe est la suivante :
+
+```js
+
+const state = {
+    name : "",
+    email : "alan@alan.fr"
+}
+
+let name = "email";
+const newState =  { ...state, [name] : "bernard@bernard.fr"  } 
+```
+
+## Exercice population
+
+1. Soit les données suivantes dans la variable populations, ordonnées les par ordre croissant par rapport à la longueur des noms.
+
+Indication : utilisez la fonction sort et une fonction fléchée pour ordonnées les valeurs.
+
+2. Ajoutez une clé lenName aux éléments du tableau population, elle permettra d'assigner la longueur de chaque name. 
+
+3. Regroupez par longueur de name dans un tableau groupNames la population.
+
+```js
+const populations = [
+    { "id" : 0, "name" : "Alan" },
+    { "id" : 1, "name" : "Albert" },
+    { "id" : 2, "name" : "Jhon" },
+    { "id" : 3, "name" : "Brice" },
+    { "id" : 4, "name" : "Alexendra" },
+    { "id" : 5, "name" : "Brad" },
+    { "id" : 6, "name" : "Carl" },
+    { "id" : 7, "name" : "Dallas" },
+    { "id" : 8, "name" : "Dennis" },
+    { "id" : 9, "name" : "Edgar" },
+    { "id" : 10, "name" : "Erika" },
+    { "id" : 11, "name" : "Isaac" },
+    { "id" : 12, "name" : "Ian" }
+];
+```

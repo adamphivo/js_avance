@@ -449,16 +449,53 @@ const sum = (x, y, z) => x + y + z ;
 const sum2 = (x, y) => { return x + y; }
 ```
 
-### Exercice counter arrow
 
-Créez une fonction non fléchée qui lancera un compteur qui s'incrémente de +1 toutes les secondes. Vous partirez du code suivant :
+## Cas d'utilisation avec des fonctions permettant de parcourir des collections comme map
+
+Vous pouvez utiliser une fonction fléchée sur des collections en utilisant des fonctions comme map, filter par exemple :
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
+const powerNumber = numbers.map( number => number ** 2) ;
+```
+
+La fonction filter permet de filtrer des données dans un tableau en fonction d'un critère
 
 ```js
 
-function Counter(){
-    this.count = 0;
-}
+powerNumber.filter( number => number > 10 );
 
 ```
 
-Utilisez un setInterval et incrémentez la variable count de la fonction Counter.
+### Exercice fonction map
+
+Utilisez la fonction map pour calculer le prix TTC des téléphones suivants en utilisant une fonction fléchée :
+
+```js
+
+const phones  = [
+  { name:'iphone XX', priceHT:900 },
+  { name:'iphone X', priceHT:700 },
+  { name:'iphone B', priceHT:200 }
+];
+
+```
+
+
+### Exercice counter arrow
+
+Corrigez le code (ES5) suivant afin que le compteur s'incrémente correctement.
+
+```js
+// ES5 
+const CounterV1 = {
+count: 0,
+counter: function counter() {
+    setInterval(function () {
+    this.count++;
+    console.log(this.count);
+    }, 1000);
+}
+};
+
+```

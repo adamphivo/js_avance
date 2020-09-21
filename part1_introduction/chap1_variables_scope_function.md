@@ -467,6 +467,23 @@ powerNumber.filter( number => number > 10 );
 
 ```
 
+Par exemple, pour faire la somme des nombres de la variable numbers plus haut dans le cours, vous pouvez en utilisant reduce écrire :
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
+const total = numbers.reduce( (curr, acc) => curr + acc  ) ;
+
+console.log(total); // affiche 55
+```
+
+Remarque sur reduce elle possède deux paramètres curr : valeur courante du tableau et acc variable permettant d'accumuler les calculs. Un reducer produit un unique résultat sur une collection de type Array.
+
+```js
+// la valeur 100 ici est utiliser pour initialiser acc
+// dans le reducer, par défaut cette valeur vaut 0
+array.reduce( (curr, acc) => curr + acc , 100);
+```
+
 ### Exercice fonction map
 
 Utilisez la fonction map pour calculer le prix TTC des téléphones suivants en utilisant une fonction fléchée :
@@ -498,4 +515,69 @@ counter: function counter() {
 }
 };
 
+```
+
+## Affectation par décomposition
+
+Vous pouvez affecter par décomposition des variables pré-définies comme suit
+
+```js
+let a, b;
+[a, b] = [10, 20];
+```
+
+Si vous ne souhaitez affecter que quelques variables et récupérer le reste de l'assignation dans un tableau, vous devez utiliser le spread operator :
+
+```js
+let a, b, rest;
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+```
+
+### Exercice permuation
+
+Soient les trois variables a,b, et c suivantes permettez les valeurs dans l'ordre suivant a <- b, b <- c et  c <- a
+
+```js
+let a = 1, b = 2, c = 4;
+```
+
+### Exercice assigner par décomposition
+
+Soit le littéral student suivant assigner les valeurs name, notes et average dans les constantes name, notes et average dans le script courant.
+
+```js
+let student = {  
+    name : "Alan", 
+    notes : [ 10, 16, 17], 
+    average : null 
+}
+```
+
+### Exercice itérer et décomposition
+
+Soit les données suivantes afficher le nom et le nom de la soeur de chaque étudiant en utilisant une boucle for of :
+
+// Nom : Alan soeur : Sylvie
+
+```js
+const students = [
+  {
+    name: "Alan",
+    family: {
+      mother: "Isa",
+      father: "Philippe",
+      syster: "Sylvie"
+    },
+    age: 35
+  },
+  {
+    nom: "Bernard",
+     family: {
+      mother: "Particia",
+      father: "Cécile",
+      syster: "Annie"
+    },
+    age: 55
+  }
+];
 ```

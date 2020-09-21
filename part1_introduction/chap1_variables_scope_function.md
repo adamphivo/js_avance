@@ -146,7 +146,10 @@ const ensemble = new Set([1, 2, 3, 4, 5, 5]);
 
 Nous n'utilisons pas le mot réservé var pour définir une variable et utiliserons à la place le mot reservé **let** qui a été introduit pour donner plus de cohérence. 
 
-Pour déclarer une variable nous utiliserons le mot réservé du langage **let** en JS. *La variable définie avec let a une portée scopée au niveau du bloc dans lequelle elle a été déclarée.*
+Pour déclarer une variable nous utiliserons le mot réservé du langage **let** en JS. 
+
+Définition à retenir :
+**La variable définie avec let a une portée scopée au niveau du bloc dans lequelle elle a été déclarée.**
 
 *Remarque importante : lorsque vous définissez une variable à l'intérieur d'une fonction elle est scopée (portée) dans la fonction elle-même.*
 
@@ -254,15 +257,15 @@ calcul();
 
 ```
 
-## Exercice TDZ
+## Exercice TDZ (tempr)
 
 Est ce que le code suivant est valide ? 
 
 ```js
 function tdz(){
-    console.log(tdz);
+    console.log(tdz_val);
 
-    let tdz = "Temporal Dead Zone" ;
+    let tdz_val = "Temporal Dead Zone" ;
 }
 
 tdz();
@@ -374,10 +377,9 @@ Créez une fonction qui permet de calculer un prix ttc connaissant un prix HT. D
 
 Créez une fonction récursive qui s'appelle elle-même, elle prendra deux arguments : un tableau de nombre et un accumulateur initialement égale à 0. Cette fonction retournera la somme des valeurs du tableau.
 
-Utilisez la méthode shift() sur le tableau. Il permet de dépiler la première valeur du tableau. Dans votre fonction récursive définissez une condition d'arrêt, sinon la fonction continuera de s'appeler indéfiniment (Stack Overflow). 
+Utilisez la méthode shift() sur le tableau. Il permet de dépiler la première valeur du tableau. Dans votre fonction récursive définissez **une condition d'arrêt**, sinon la fonction continuera de s'appeler indéfiniment (Stack Overflow). 
 
 Voyez les exemples suivants pour vous aidez à faire cette exercice :
-
 
 ```js
 
@@ -387,6 +389,11 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
 numbers.shift();
 
 function accumulator(numbers, acc = 0 ){
+
+    // Une condition d'arrêt et retourner la somme des valeurs du tableau
+
+    // dans la fonction on ré-appelle la fonction elle-même
+    // accumulator(numbers, 10);
 
 }
 

@@ -452,7 +452,7 @@ const sum2 = (x, y) => { return x + y; }
 
 ## Cas d'utilisations
 
-Vous pouvez utiliser une fonction fléchée sur des collections en utilisant des fonctions comme map, filter par exemple :
+Vous pouvez utiliser une fonction fléchée sur des collections en utilisant des fonctions comme map, filter ou reduce par exemple :
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
@@ -467,7 +467,7 @@ powerNumber.filter( number => number > 10 );
 
 ```
 
-Par exemple, pour faire la somme des nombres de la variable numbers plus haut dans le cours, vous pouvez en utilisant reduce écrire :
+Par exemple, pour faire la somme des nombres de la variable numbers plus haut dans le cours, vous pouvez en utilisant reduce écrire le code suivant :
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
@@ -476,12 +476,11 @@ const total = numbers.reduce( (curr, acc) => curr + acc  ) ;
 console.log(total); // affiche 55
 ```
 
-Remarque sur reduce elle possède deux paramètres curr : valeur courante du tableau et acc variable permettant d'accumuler les calculs. Un reducer produit un unique résultat sur une collection de type Array.
+Remarque, reduce possède deux paramètres **curr** : valeur courante du tableau et **acc** variable permettant d'accumuler les calculs. Un reducer produit un unique résultat sur une collection de type Array. Vous pouvez également initialiser la variable acc en donnant une valeur à la méthode reducer deuxième paramètre facultatif :
 
 ```js
-// la valeur 100 ici est utiliser pour initialiser acc
-// dans le reducer, par défaut cette valeur vaut 0
-array.reduce( (curr, acc) => curr + acc , 100);
+numbers.reduce( (curr, acc) => curr + acc , 100);
+// 155
 ```
 
 ### Exercice fonction map
@@ -497,7 +496,6 @@ const phones  = [
 ];
 
 ```
-
 
 ### Exercice counter arrow
 
@@ -519,7 +517,7 @@ counter: function counter() {
 
 ## Affectation par décomposition
 
-Vous pouvez affecter par décomposition des variables pré-définies comme suit
+Vous pouvez affecter par décomposition des variables pré-définies comme suit :
 
 ```js
 let a, b;
@@ -535,7 +533,11 @@ let a, b, rest;
 
 ### Exercice permuation
 
-Soient les trois variables a,b, et c suivantes permettez les valeurs dans l'ordre suivant a <- b, b <- c et  c <- a
+Soient les trois variables a, b, et c suivantes permutez les valeurs dans l'ordre suivant :
+
+- a <- b
+- b <- c  
+- c <- a
 
 ```js
 let a = 1, b = 2, c = 4;
@@ -543,7 +545,7 @@ let a = 1, b = 2, c = 4;
 
 ### Exercice assigner par décomposition
 
-Soit le littéral student suivant assigner les valeurs name, notes et average dans les constantes name, notes et average dans le script courant.
+Soit le littéral student suivant assignez les valeurs **name**, **notes** et **average** dans les constantes name, notes et average dans le script courant.
 
 ```js
 let student = {  
@@ -551,11 +553,16 @@ let student = {
     notes : [ 10, 16, 17], 
     average : null 
 }
+
+// TODO ...
+
+// constantes
+console.log(name, notes, average);
 ```
 
-### Exercice itérer et décomposition
+### Exercice iterate destructuring
 
-Soit les données suivantes afficher le nom et le nom de la soeur de chaque étudiant en utilisant une boucle for of :
+Soient les données suivantes affichez le nom et le nom de la soeur de chaque étudiant en utilisant une boucle for of :
 
 // Nom : Alan soeur : Sylvie
 

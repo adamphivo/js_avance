@@ -578,7 +578,7 @@ const students = [
     age: 35
   },
   {
-    nom: "Bernard",
+    name: "Bernard",
      family: {
       mother: "Particia",
       father: "Cécile",

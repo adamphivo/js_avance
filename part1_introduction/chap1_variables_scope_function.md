@@ -450,7 +450,7 @@ const sum2 = (x, y) => { return x + y; }
 ```
 
 
-## Cas d'utilisation avec des fonctions permettant de parcourir des collections comme map
+## Cas d'utilisations
 
 Vous pouvez utiliser une fonction fléchée sur des collections en utilisant des fonctions comme map, filter par exemple :
 

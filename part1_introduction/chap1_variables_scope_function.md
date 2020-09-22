@@ -621,9 +621,9 @@ const newState = { ...state, email : "sophie@sophie.fr" }
 // {name: "", email: "sophie@sophie.fr"}
 ```
 
-## nom de propriété calculés et décomposition
+## Nom de propriété calculé et décomposition
 
-Vous pouvez utiliser une variable pour définir une clé d'un littéral, dans ce cas la syntaxe est la suivante :
+Vous pouvez utiliser une variable pour définir une clé d'un littéral, dans ce cas la syntaxe est la suivante, il faut utiliser des crochets pour JS interprète la variable comme une clé du littéral :
 
 ```js
 
@@ -632,19 +632,20 @@ const state = {
     email : "alan@alan.fr"
 }
 
+// définition d'une clé dynamique 
 let name = "email";
 const newState =  { ...state, [name] : "bernard@bernard.fr"  } 
 ```
 
-## Exercice population
+## Exercice populations
 
-1. Soit les données suivantes dans la variable populations, ordonnées les par ordre croissant par rapport à la longueur des noms.
+1. Soit les données suivantes populations, ordonnées les par ordre croissant par rapport à la longueur des noms.
 
-Indication : utilisez la fonction sort et une fonction fléchée pour ordonnées les valeurs.
+*Indications : utilisez la méthode **sort**, cette méthode modifie le tableau. Vous pouvez lui passer une fonction (fléchée) pour calculer l'ordre par rapport à une clé du tableau ou un calcul spécifique. Repportez-vous à la documentation : [sort](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort).*
 
-2. Ajoutez une clé lenName aux éléments du tableau population, elle permettra d'assigner la longueur de chaque name. 
+2. Ajoutez une clé **lenName** aux éléments du tableau population vous assignerez la longueur de chaque nom à cette variable.
 
-3. Regroupez par longueur de name dans un tableau groupNames la population.
+3. Regroupez maintenant dans un nouveau tableau groupNames les noms de même longueur (même nombre de caractères).
 
 ```js
 const populations = [

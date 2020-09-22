@@ -643,9 +643,11 @@ const newState =  { ...state, [name] : "bernard@bernard.fr"  }
 
 *Indications : utilisez la méthode **sort**, cette méthode modifie le tableau. Vous pouvez lui passer une fonction (fléchée) pour calculer l'ordre par rapport à une clé du tableau ou un calcul spécifique. Repportez-vous à la documentation : [sort](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort).*
 
-2. Ajoutez une clé **lenName** aux éléments du tableau population vous assignerez la longueur de chaque nom à cette variable.
+2. Ajoutez une clé **lenName** aux éléments du tableau populations vous assignerez la longueur de chaque nom à cette variable.
 
 3. Regroupez maintenant dans un nouveau tableau groupNames les noms de même longueur (même nombre de caractères).
+
+*Indications : Imaginez une structure de données, par exemple un tableau de tableau ou un Map, vous pouvez également utiliser **filter** pour regrouper les noms de même longueur dans le nouveau tableau groupNames*
 
 ```js
 const populations = [
